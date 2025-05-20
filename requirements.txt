@@ -1,0 +1,6 @@
+requests
+aiogram
+python-whois
+dnspython
+picarta
+supervisor
