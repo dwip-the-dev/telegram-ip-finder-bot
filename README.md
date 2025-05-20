@@ -18,8 +18,6 @@ A powerful Telegram bot for IP, phone, and domain information lookup with multip
 ### Prerequisites
 - Python 3.8+
 - Telegram Bot Token from [@BotFather](https://t.me/BotFather)
-- Numverify API Key (for phone lookup)
-- OpenCage API Key (for geocoding)
 
 ### Deployment
 
@@ -29,13 +27,15 @@ git clone https://github.com/dwip-the-dev/telegram-ip-finder-bot.git
 cd telegram-ip-finder-bot
 ```
 
-#### 2. Set up environment variables
-Create a `.env` file with:
-```env
-TOKEN=your_telegram_bot_token
-NUMVERIFY_API_KEY=your_numverify_key
-OPENCAGE_API_KEY=your_opencage_key
-LOG_CHANNEL_ID=your_log_channel_id
+#### 2. Configure API keys directly in code
+Edit the main bot file and set these variables at the top:
+
+```python
+# API KEYS (Set these directly in code)
+TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # From @BotFather
+NUMVERIFY_API_KEY = "YOUR_NUMVERIFY_KEY"  # From numverify.com
+OPENCAGE_API_KEY = "YOUR_OPENCAGE_KEY"  # From opencagedata.com
+LOG_CHANNEL_ID = "YOUR_LOG_CHANNEL_ID"  # Telegram channel ID for logs
 ```
 
 #### 3. Install dependencies
@@ -54,9 +54,7 @@ This bot includes a `Procfile` ready for Railway deployment:
 
 1. Create a new Railway project
 2. Connect your GitHub repository
-3. Add the required environment variables
-4. Deploy!
-
+3. Deploy!
 
 ## 🛠️ Commands
 
@@ -70,6 +68,7 @@ This bot includes a `Procfile` ready for Railway deployment:
 | `/whois <domain>` | WHOIS lookup | `/whois google.com` |
 | `/dns <domain>` | DNS lookup | `/dns github.com` |
 | `/portscan <ip>` | Port scan | `/portscan 1.1.1.1` |
+| `/info <username>` | User/chat info | `/info @username(testing)` |
 
 ## 📊 API Services Used
 
@@ -77,6 +76,13 @@ This bot includes a `Procfile` ready for Railway deployment:
 - [Numverify](https://numverify.com) - Phone number validation
 - [REST Countries](https://restcountries.com) - Country information
 - [OpenCage](https://opencagedata.com) - Geocoding services
+
+## ⚠️ Security Note
+
+For production use, consider:
+1. Using environment variables instead of hardcoded keys
+2. Restricting bot access to trusted users
+3. Regularly rotating API keys
 
 ## 📜 License
 
