@@ -14,10 +14,10 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command
 
 # API KEYS
-TOKEN = "7542368975:AAGOd5t3z96XTFK8PbWvrvpcK2VoH55e1SA"  # Replace with your bot token
-NUMVERIFY_API_KEY = "7893c25ccd7025931db9edda7822da27"  # Replace with your Numverify API key
-LOG_CHANNEL_ID = "-1002665219317"  # Replace with your log channel ID
-OPENCAGE_API_KEY = "4585d6416d6841dd9cab97cd38b440e4"
+TOKEN = "7542368975:**....**"  # Replace with your bot token
+NUMVERIFY_API_KEY = "7893c25c**....**"  # Replace with your Numverify API key
+LOG_CHANNEL_ID = "-100**...***"  # Replace with your log channel ID
+OPENCAGE_API_KEY = "4585d**...**"
 # Initialize bot and dispatcher
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
